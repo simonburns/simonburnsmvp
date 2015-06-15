@@ -12,7 +12,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
         // route to show our basic form (/form)
         .state('form', {
             url: '/form',
-            templateUrl: 'form.html',
+            templateUrl: 'location.html',
             controller: 'formController'
         })
 
@@ -28,19 +28,12 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             controller: 'formController'
         })
         
-        // nested states 
-        // each of these sections will have their own view
-        // url will be nested (/form/profile)
-        // .state('form.profile', {
-        //     url: '/profile',
-        //     templateUrl: 'form-profile.html'
-        // })
-        
-        // // url will be /form/interests
-        // .state('form.interests', {
-        //     url: '/interests',
-        //     templateUrl: 'form-interests.html'
-        // })
+        //location page
+        .state('form.location', {
+            url: '/location',
+            templateUrl: 'location.html',
+            controller: 'formController'
+        })
         
         // url will be /form/payment
         .state('form.payment', {
@@ -48,21 +41,47 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             templateUrl: 'form-payment.html'
         });
        
+
     // catch all route
     // send users to the form page 
     $urlRouterProvider.otherwise('/form');
+
+
+})
+
+.controller('geoCtrl', function($scope, $http) {
+
+    $http.get("http://jeocoder.herokuapp.com/zips/" + formData.postalCode)
+    .success(function(response) {$scope.data = response;
+        console.log("logging response", response);
+    });
 })
 
 // our controller for the form
 // =============================================================================
-.controller('formController', function($scope) {
-    
+.controller('formController', function($scope, $http) {
+
+    // $http.get("http://jeocoder.herokuapp.com/zips/94110")
+    // .success(function(response) {$scope.data = response;
+    //     console.log("logging response", response);
+    //     console.log("logging response", response.city);
+    // });
+
     // we will store all of our form data in this object
     $scope.formData = {};
+
+    $scope.fetch = function (userInput){
+        $http.get("http://jeocoder.herokuapp.com/zips/" + userInput)
+        .success(function(response) {
+            $scope.data = response;
+            console.log("logging response", response);
+        });
+    }
     
     // function to process the form
     $scope.processForm = function() {
         alert('awesome!');  
     };
-    
+   
 });
+
