@@ -1,19 +1,47 @@
 <label>Who are you caring for?</label>
-<div class="form-group">
-    <div class="radio">
-     <label>
-           <input type="radio" ng-model="formData.careType" value="someoneElse" checked>
-           Someone else
-        </label>
+    <div class="form-group">
+        <div class="btn btn-primary btn-lg"> Someone else </div>
+        <div class="btn btn-primary btn-lg">Myself</div>
     </div>
-    <div class="radio">
-        <label>
-            <input type="radio" ng-model="formData.careType" value="myself">
-            Myself
-        </label>
+
+ <div class="form-group">
+      <label class="control-label" for="focusedInput">First Name</label>
+      <input class="form-control" id="focusedInput" type="text" value="Johnny ">
+      <label class="control-label" for="focusedInput">Last Name</label>
+      <input class="form-control" id="focusedInput" type="text" value="Appleseed">
+  </div>
+
+ <div class="form-group">
+    <h2> Gender </h2>
+      <div class="btn-group btn-group-justified">
+          <a href="#" class="btn btn-default">Male</a>
+          <a href="#" class="btn btn-default">Female</a>
+          <a href="#" class="btn btn-default">Other</a>
     </div>
 </div>
 
+
+<div class="form-group">
+      <h2> Address </h2>
+      <input class="form-control" id="focusedInput" type="text" value="Street Address">
+        <h3> </h3>
+      <input class="form-control" id="focusedInput" type="text" value="Apt #">
+        <h3> City </h3>
+      <input class="form-control" id="focusedInput" type="text" value="City">
+        <h3> Province </h3>
+      <input class="form-control" id="focusedInput" type="text" value="Province">
+        <h3> Postal Code </h3>
+      <input class="form-control" id="focusedInput" type="text" value="Postal Code">
+        <h3> Specific Instructions </h3>
+      <input class="form-control" id="focusedInput" type="text" value="Back Door">
+        <h3> Favorite Activities </h3>
+      <input class="form-control" id="focusedInput" type="text" value="Playing Gold">
+        <h3> Profession Before Retirement </h3>
+      <input class="form-control" id="focusedInput" type="text" value="University Professor">
+    </div>
+
+<!-- </div>
+ -->
 <div class="form-group row">
 <div class="col-xs-6 col-xs-offset-3">
     <a ui-sref="form.payment" class="btn btn-block btn-info">
