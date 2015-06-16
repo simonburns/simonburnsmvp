@@ -1,19 +1,13 @@
 <div class="form-group" ng-controller='formController'>
-  <h2 style="margin: 0 auto;">Please enter you Postal Code and see if we're available.</h2>
-  <div class="form-group">
-  <input type="text" class="form-control" name="email" ng-model="formData.postalCode" ng-submit='fetch()'>
+  <div style="margin-top:40px;" class="form-group">
+  <h2 style="margin-right:30px;" class='col-md-10 col-md-offset-2'>Please enter you Postal Code and see if we're available.</h2>
+  <input class="form-control input-lg" type="text" id="inputLarge" ng-model="formData.postalCode" ng-submit='fetch()'>
   </div>
 
-
-		  <div class="form-group row">
+	<div class="form-group row">
 		<div class="col-xs-6 col-xs-offset-3">
-		 <a class="btn btn-block btn-info" ng-click="fetch(formData.postalCode)">
-		   Check Availability <span class="glyphicon glyphicon-circle-arrow-right"></span>
-		  </a>
-  
-		<!--   <a ng-class="btn btn-block btn-info" ui-sref="form.createAccount"> Create Account 
-		  <span class="glyphicon glyphicon-circle-arrow-right"></span>
-		  </a>
-		</div> -->
+		 <a class="btn btn-block btn-info" ng-click="fetch(formData.postalCode)">Check Availability</a>
+	</div>
+	</div>
 </div>
 

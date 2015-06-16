@@ -80,18 +80,11 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
              }
         });
     }
-
-
-//     app.run(['$state', '$rootScope', '$timeout', function ($state, $rootScope, $timeout) {
-//   var appStarted = 0; // flag to redirect only once when app is started
-//   $rootScope.$on('$stateChangeStart', 
-//   function(event, toState, toParams, fromState, fromParams) { 
-//     if(appStarted) return;
-//     appStarted = 1;   
-//     event.preventDefault(); //prevents from resolving requested url
-//     $state.go('home.other'); //redirects to 'home.other' state url
-//   });  
-// }]);
+    //toggle on the forms on care.html
+    $scope.visible = false;
+    $scope.toggle = function() {
+        $scope.visible = !$scope.visible;
+    };
      // function to process the form
     $scope.processForm = function() {
         alert('awesome!');  
