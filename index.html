@@ -8,7 +8,9 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="bower_components/angular-parse-wrapper/dist/angular-parse-wrapper.min.js"></script>
     <script src="app.js"></script>
     
 </head>
@@ -16,31 +18,21 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">CareHome</a>
+      <a class="navbar-brand" ui-sref="/form">CareHome</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-center col-xs-6 col-xs-offset-3">
-        <li><a href="#" >Create Account</a></li>
-        <li><a href="#" >Care Details</a></li>
-        <li><a href="#" >Plan & Pay</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="createAccount" >Create Account</a></li>
+        <li><a ui-sref="care" >Care Details</a></li>
+        <li><a ui-sref="payment" >Plan & Pay</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right btn btn-primary btn-sm">
-        <li><a href="#">Sign In</a></li>
+      <ul class="nav navbar-nav navbar-right ">
+        <li><a class="btn btn-primary btn-sm" href="#">Sign In</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
-
     <div class="container">
      <div ui-view></div>
  </div>

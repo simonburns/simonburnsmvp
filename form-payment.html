@@ -1,5 +1,32 @@
 <div class="text-center">
   <span class="glyphicon glyphicon-heart"></span>
+
+<h2> What can we help with?</h2>
+<div class="form-group">
+  <div class="btn-group btn-group-justified">
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Activity</a>
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Companionship</a>
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Food</a>
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Grooming</a>
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Housekeeping</a>
+  <a ng-model='formData.purpose' class="btn btn-default"><img src= />Transport</a>
+</div>
+</div>
+
+<h2> How many days a week?</h2>
+<div class="form-group">
+ <div class="btn-toolbar">
+  <div class="btn-group">
+    <a ng-model='formData.days' class="btn btn-default">1</a>
+    <a ng-model='formData.days' class="btn btn-default">2</a>
+    <a ng-model='formData.days' class="btn btn-default">3</a>
+    <a ng-model='formData.days' class="btn btn-default">4</a>
+    <a ng-model='formData.days' class="btn btn-default">5</a>
+    <a ng-model='formData.days' class="btn btn-default">6</a>
+    <a ng-model='formData.days' class="btn btn-default">7</a>
+   </div>
+ </div>
+ </div>
     
-  <button type="submit" class="btn btn-danger">Submit</button>
+  <button ng-submit='' type="submit" class="btn btn-danger">Submit</button>
 </div>

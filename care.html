@@ -7,46 +7,46 @@
     </div>
 
  <div ng-show="visible" class="form-group">
-      <label style="margin-top:20px;" class="control-label" for="focusedInput">First Name</label>
-      <input class="form-control" id="focusedInput" type="text" value="Johnny ">
-      <label class="control-label" for="focusedInput">Last Name</label>
-      <input class="form-control" id="focusedInput" type="text" value="Appleseed">
+      <h4>First Name</h4>
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.firstName' value="Johnny ">
+      <h4>Last Name</h4>
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.lastName' value="Appleseed">
   </div>
 
  <div ng-show="visible" class="form-group">
     <h2> Gender </h2>
       <div class="btn-group btn-group-justified">
-          <a href="#" class="btn btn-default">Male</a>
-          <a href="#" class="btn btn-default">Female</a>
-          <a href="#" class="btn btn-default">Other</a>
+          <a href="#" class="btn btn-default" ng-model='formData.gender'>Male</a>
+          <a href="#" class="btn btn-default" ng-model='formData.gender'>Female</a>
+          <a href="#" class="btn btn-default" ng-model='formData.gender'>Other</a>
     </div>
 </div>
 
 
 <div ng-show="visible" class="form-group">
       <h2> Address </h2>
-      <input class="form-control-static" id="focusedInput" type="text" value="Street Address">
+      <input class="form-control-static" id="focusedInput" type="text" ng-model='formData.street'value="Street Address">
         <h3> </h3>
-      <input class="form-control-static" id="focusedInput" type="text" value="Apt #">
+      <input class="form-control-static" id="focusedInput" ng-model='formData.suite' type="text" value="Apt #">
         <h4> City </h4>
-      <input class="form-control" id="focusedInput" type="text" value="City">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.city' value="City">
         <h4> Province </h4>
-      <input class="form-control" id="focusedInput" type="text" value="Province">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.province' value="Province">
         <h4> Postal Code </h4>
-      <input class="form-control" id="focusedInput" type="text" value="Postal Code">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.postal' value="Postal Code">
         <h4> Specific Instructions </h4>
-      <input class="form-control" id="focusedInput" type="text" value="Back Door">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.instructions' value="Back Door">
         <h4> Favorite Activities </h4>
-      <input class="form-control" id="focusedInput" type="text" value="Playing Gold">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.activities'value="Playing Gold">
         <h4> Profession Before Retirement </h4>
-      <input class="form-control" id="focusedInput" type="text" value="University Professor">
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.profession' value="University Professor">
     </div>
 
 <!-- </div>
  -->
 <div class="form-group row">
 <div class="col-xs-6 col-xs-offset-3">
-    <a ui-sref="payment" class="btn btn-block btn-info">Next Section</a>
+    <a ui-sref="payment" ng-submit='' class="btn btn-block btn-info">Next Section</a>
 </div>
 </div>
 </div>

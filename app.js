@@ -1,7 +1,6 @@
-
 // create our angular app and inject ngAnimate and ui-router 
 // =============================================================================
-angular.module('formApp', ['ngAnimate', 'ui.router'])
+angular.module('formApp', ['ngAnimate','ui.router'])
 
 // configuring our routes 
 // =============================================================================
@@ -35,15 +34,20 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
         })
 
          .state('comingSoon', {
-            url: '/comingSoon',
-            templateUrl: 'comingSoon.html',
+            templateUrl: 'coming-soon.html',
+            url: '/coming-soon',
             controller: 'formController'
+        })
+
+         .state('thankYou', {
+            url: '/thankYou',
+            templateUrl: 'thankYou.html'
         })
         
         .state('payment', {
             url: '/payment',
             templateUrl: 'form-payment.html'
-        });
+        });   
     // catch all route
     // send users to the form page 
     // $urlRouterProvider.otherwise('/form');
@@ -62,24 +66,37 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             $scope.formData.data = response.city;
             console.log("logging response", response);
             if ($scope.formData.data === 'NEW YORK'){
-                // $state.go('form.createAccount');
-
                 $location.path('/create-account');
                 console.log('locat', $location.path());
                 console.log('NYYYY');
                 $scope.formData.next = 'form.createAccount';
                 console.log($scope.formData.next);
             } else {
-                // $state.go('form.comingSoon');
-
-                $location.path('/createAccount');
+                $location.path('/coming-soon');
                 console.log('loc', $location.path());
                 console.log('logging comming soon');
-                $scope.next = 'form.comingSoon';
+                $scope.formData.next = 'form.comingSoon';
                 console.log($scope.next);
              }
         });
     }
+
+
+    $scope.serverCall = function (userInput){
+        $http({
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            url: 'https://api.parse.com/1/classes/formData',
+            data: $.param($scope.formData)
+        }).success(function () {
+            console.log('YAY WORKING');
+            });
+        });
+    };
+
+    //parse API POST req here instead of going through the process of setting it up via
+    //a module?
+
     //toggle on the forms on care.html
     $scope.visible = false;
     $scope.toggle = function() {
@@ -90,4 +107,6 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
         alert('awesome!');  
     };
 });
+
+
 

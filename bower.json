@@ -1,0 +1,17 @@
+{
+  "name": "bowerjson",
+  "version": "current",
+  "homepage": "https://github.com/simonburns77/simonburnsmvp",
+  "authors": [
+    "Simon <sburns77@gmail.com>"
+  ],
+  "description": "x",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-parse-wrapper": "~0.2.0",
+    "parse-angular-patch": "~0.1.2"
+  }
+}
