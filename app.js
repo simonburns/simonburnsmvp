@@ -81,18 +81,17 @@ angular.module('formApp', ['ngAnimate','ui.router'])
         });
     }
 
-
-    $scope.serverCall = function (userInput){
-        $http({
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            url: 'https://api.parse.com/1/classes/formData',
-            data: $.param($scope.formData)
-        }).success(function () {
-            console.log('YAY WORKING');
-            });
-        });
-    };
+    // $scope.serverCall = function (userInput){
+    //     $http({
+    //         method: 'POST',
+    //         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    //         url: 'https://api.parse.com/1/classes/formData',
+    //         data: $.param($scope.formData)
+    //     }).success(function () {
+    //         console.log('YAY WORKING');
+    //         });
+    //     };
+    // });
 
     //parse API POST req here instead of going through the process of setting it up via
     //a module?

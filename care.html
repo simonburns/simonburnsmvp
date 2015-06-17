@@ -7,7 +7,7 @@
     </div>
 
  <div ng-show="visible" class="form-group">
-      <h4>First Name</h4>
+      <h4 class='col-md-10 col-md-offset-0' >First Name</h4>
       <input class="form-control" id="focusedInput" type="text" ng-model='formData.firstName' value="Johnny ">
       <h4>Last Name</h4>
       <input class="form-control" id="focusedInput" type="text" ng-model='formData.lastName' value="Appleseed">
@@ -25,8 +25,8 @@
 
 <div ng-show="visible" class="form-group">
       <h2> Address </h2>
-      <input class="form-control-static" id="focusedInput" type="text" ng-model='formData.street'value="Street Address">
-        <h3> </h3>
+      <input class="form-control" id="focusedInput" type="text" ng-model='formData.street'value="Street Address">
+        <h4> Suite</h3>
       <input class="form-control-static" id="focusedInput" ng-model='formData.suite' type="text" value="Apt #">
         <h4> City </h4>
       <input class="form-control" id="focusedInput" type="text" ng-model='formData.city' value="City">
@@ -46,7 +46,7 @@
  -->
 <div class="form-group row">
 <div class="col-xs-6 col-xs-offset-3">
-    <a ui-sref="payment" ng-submit='' class="btn btn-block btn-info">Next Section</a>
+    <a ui-sref="payment" ng-submit='.serverCall()' class="btn btn-block btn-info">Next Section</a>
 </div>
 </div>
 </div>
