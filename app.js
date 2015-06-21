@@ -81,6 +81,21 @@ angular.module('formApp', ['ngAnimate','ui.router'])
         });
     }
 
+
+ $scope.serverCall = function() {
+        $http({method : 'POST',
+            url : 'https://api.parse.com/1/classes/formData',
+            data: $scope.formData,
+            headers: { 'X-Parse-Application-Id':'SwuUqXIiEBCTe0CZ4MdpHY5ehTgFjstgtyaPlQuY', 
+            'X-Parse-REST-API-Key':'raPMJmJxlZvFhx2xGlqkWIKCS5Unuapy2NAQfmr1'}})
+            .success(function(data) {
+                console.log("Working!");
+            })
+            .error(function(data, status) {
+                alert("Error");
+            });
+    };
+
     // $scope.serverCall = function (userInput){
     //     $http({
     //         method: 'POST',
