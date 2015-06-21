@@ -59,7 +59,7 @@ angular.module('formApp', ['ngAnimate','ui.router'])
     $scope.formData = {};
 
     $scope.fetch = function (userInput){
-        $http.get("http://jeocoder.herokuapp.com/zips/" + userInput)
+        $http.get("https://jeocoder.herokuapp.com/zips/" + userInput)
         .success(function(response) {
             $scope.formData.data = response.city;
             console.log("logging response", response);
