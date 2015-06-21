@@ -2,15 +2,20 @@
   "name": "jeocoder",
   "version": "0.0.2",
   "author": "Johnny Domino <jvdomino@gmail.com>",
-  "repository" : "git://github.com/jmonster/node-jeocoder",
+  "repository": "git://github.com/jmonster/node-jeocoder",
   "main": "lib/jeocoder",
-  "keywords": ["geocode","geocoder","zipcode"],
+  "keywords": [
+    "geocode",
+    "geocoder",
+    "zipcode"
+  ],
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.3",
-    "clustrap": "git+https://github.com/jmonster/node-clustrap.git"
+    "clustrap": "git+https://github.com/jmonster/node-clustrap.git",
+    "express": "^3.0.3",
+    "gzippo": "^0.2.0"
   },
   "devDependencies": {
     "csv": "*",
